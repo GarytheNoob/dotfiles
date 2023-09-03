@@ -1,0 +1,29 @@
+#aliases
+alias q=exit
+alias cls=clear
+
+alias ls="lsd"
+alias ll="lsd -l"
+alias la="lsd -A"
+alias lla="lsd -lA"
+alias l="lsd -lA"
+alias tree="lsd -a --tree --icon never"
+
+alias f=neofetch
+
+alias sudo="sudo -E"
+
+# alias vim="nvim"
+
+alias c="clash &"
+alias stx=startx
+
+alias p="paru"
+
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push &"
+
+alias rs="source /home/GarytheNoob/.zshrc"
+
+
