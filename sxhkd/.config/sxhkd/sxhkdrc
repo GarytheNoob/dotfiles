@@ -17,15 +17,15 @@ super + a
 
 # launch rofi
 super + p
-    /home/GarytheNoob/script/rofi/launcher.sh
+    $HOME/script/launcher.sh
 
 # launch powermenu
 Scroll_Lock
-    /home/GarytheNoob/script/rofi/powermenu.sh
+    $HOME/script/powermenu.sh
 
 # launch settings
 super + control + p
-    /home/GarytheNoob/script/rofi/rofimain.sh
+    $HOME/script/rofimain.sh
 
 # open terminal
 super + Return

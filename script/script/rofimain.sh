@@ -24,17 +24,16 @@ initMenu(){
 
 # main
 
-cd "/home/GarytheNoob/script"
 choice="$(initMenu)"
 case "$choice" in
     "Config services")
-        bash ./rofi/configservice.sh
+        bash $HOME/script/configservice.sh
         ;;
     "Config Wi-Fi")
-        bash ./rofi/rofi-wifi-menu.sh
+        bash $HOME/script/rofi-wifi-menu.sh
         ;;
     "Change Wallpaper")
-        bash ./dwm/wallpaper.sh -r && notify-send "Wallpaper successfully changed."
+        bash $HOME/script/wallpaper.sh -r && notify-send "Wallpaper successfully changed."
         ;;
     "Leave dwm")
         leaveDwm

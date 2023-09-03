@@ -1,7 +1,7 @@
 #!/bin/bash
 
-pathfile=~/.wallpaper.path
-wallpaperdir=~/wallpapers/*
+pathfile=$HOME/.wallpaper.path
+wallpaperdir=$HOME/wallpapers/*
 
 refreshWallpaper(){ 
     # Get the path of a random wallpaper in the directory
