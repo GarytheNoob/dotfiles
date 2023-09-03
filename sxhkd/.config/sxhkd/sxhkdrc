@@ -75,8 +75,12 @@ super + shift + {t,space,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+# super + ctrl + {m,x,y,z}
+# 	bspc node -g {marked,locked,sticky,private}
+
+# set the node sticky
+super + ctrl + s
+    bspc node -g sticky
 
 #
 # focus/swap
