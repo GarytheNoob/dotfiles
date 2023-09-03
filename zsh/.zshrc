@@ -29,7 +29,7 @@ alias ll="lsd -l"
 alias la="lsd -A"
 alias lla="lsd -lA"
 alias l="lsd -lA"
-alias tree="lsd --tree --icon never"
+alias tree="lsd -a --tree --icon never"
 
 alias f=neofetch
 
