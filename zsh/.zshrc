@@ -15,8 +15,6 @@ export https_proxy=http://127.0.0.1:7890
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/.zshalias
-source $HOME/.zshinit
 
 # if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 #     exec startx
@@ -32,3 +30,5 @@ fi
 # change ls colors
 LS_COLORS=$LS_COLORS:'di=0;36:ow=1;4;36' ; export LS_COLORS
 
+source $HOME/.zshalias
+source $HOME/.zshinit
