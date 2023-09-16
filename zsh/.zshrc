@@ -1,3 +1,20 @@
+# FILENAME: .zshrc
+# DESCRIPTION: zsh's config file
+# ORIGIN: https://github.com/GarytheNoob/dotfiles
+#
+# This file is partly or fully edited by
+#  ▄▄▄  ▄  ▄▄  ▄ ▄      ▄▄     
+#  █   █ █ █▄▀ █▄█   ▄█▀▀▀▀█▄  
+#  █▄█ █▀█ █ █  █   █▀      ▀▀ 
+#  ▄▄▄ ▄ ▄ ▄▄▄      █    ▀▄▄   
+#   █  █▄█ █▄▄      █▄     ▀█▄ 
+#   █  █ █ █▄▄       ▀█▄▄▄▄█▀  
+#  ▄▄▄ ▄▄▄ ▄▄▄ ▄▄     ▄▄█▀     
+#  █ █ █ █ █ █ █▄▀  ▄█▀        
+#  █ █ █▄█ █▄█ █▄▀   ▀█▄▄      
+#                       ▀▀     
+# GitHub: https://github.com/GarytheNoob
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 

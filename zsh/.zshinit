@@ -1,3 +1,20 @@
+# FILENAME: .zshinit
+# DESCRIPTION: zsh runs this script at every start
+# ORIGIN: https://github.com/GarytheNoob/dotfiles
+#
+# This file is partly or fully edited by
+#  ▄▄▄  ▄  ▄▄  ▄ ▄      ▄▄     
+#  █   █ █ █▄▀ █▄█   ▄█▀▀▀▀█▄  
+#  █▄█ █▀█ █ █  █   █▀      ▀▀ 
+#  ▄▄▄ ▄ ▄ ▄▄▄      █    ▀▄▄   
+#   █  █▄█ █▄▄      █▄     ▀█▄ 
+#   █  █ █ █▄▄       ▀█▄▄▄▄█▀  
+#  ▄▄▄ ▄▄▄ ▄▄▄ ▄▄     ▄▄█▀     
+#  █ █ █ █ █ █ █▄▀  ▄█▀        
+#  █ █ █▄█ █▄█ █▄▀   ▀█▄▄      
+#                       ▀▀     
+# GitHub: https://github.com/GarytheNoob
+
 export termapp=$(basename $(ps -p $(ps -p $$ -o ppid=) o args= | awk '{print $1}'))
 
 echo -e "\n  \033[01;34mWelcome to $termapp, $USER! \033[0m\n"
