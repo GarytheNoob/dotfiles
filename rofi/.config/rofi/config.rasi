@@ -114,7 +114,7 @@ textbox-prompt-colon {
     text-color:                  inherit;
 }
 entry {
-    enabled:                     false;
+    enabled:                     true;
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
