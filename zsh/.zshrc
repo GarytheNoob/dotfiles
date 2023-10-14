@@ -18,19 +18,20 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME=""
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 plugins=(
     git
-    # zsh-autosuggestions
-    # zsh-syntax-highlighting
+    zsh-autosuggestions
+    fast-syntax-highlighting
+    zsh-autocomplete
 )
+source $ZSH/oh-my-zsh.sh
 
 export http_proxy=http://127.0.0.1:7890
 export https_proxy=http://127.0.0.1:7890
 
-source $ZSH/oh-my-zsh.sh
 
 
 # if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
@@ -47,5 +48,6 @@ fi
 # change ls colors
 LS_COLORS=$LS_COLORS:'di=0;36:ow=1;4;36' ; export LS_COLORS
 
+eval "$(starship init zsh)"
 source $HOME/.zshalias
 source $HOME/.zshinit
