@@ -19,7 +19,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME=""
-# Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 plugins=(
     git
@@ -48,6 +47,7 @@ fi
 # change ls colors
 LS_COLORS=$LS_COLORS:'di=0;36:ow=1;4;36' ; export LS_COLORS
 
-eval "$(starship init zsh)"
 source $HOME/.zshalias
 source $HOME/.zshinit
+
+eval "$(starship init zsh)" # start starship

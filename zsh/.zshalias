@@ -41,6 +41,7 @@ alias cls=clear
 # alias vim="nvim"
 
 ## git
+## NOTE: Some git aliases are provided by the git plugin of zsh
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push &"
