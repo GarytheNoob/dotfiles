@@ -53,3 +53,8 @@ alias rs="source /home/GarytheNoob/.zshrc"
 if command -v bat &> /dev/null; then
     alias cat=bat
 fi
+
+if [[ "$HOST" = "GaryArchPC" ]]; then
+    alias pdfmerge=$HOME/.local/bin/pdfmerge
+    alias zathuraconf=$HOME/go/bin/zathuraconf
+fi
