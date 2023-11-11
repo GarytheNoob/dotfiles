@@ -2,5 +2,6 @@
 
 picom --experimental-backends &
 sxhkd &
-clash &
-blueberry-tray
+qv2ray &
+# clash &
+# blueberry-tray
