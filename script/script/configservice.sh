@@ -1,7 +1,7 @@
 #!/bin/bash
 
 manageService(){
-    menu="clash\ndunst\nfcitx5\npicom" # REMOVED sxhkd to avoid danger
+    menu="qv2ray\ndunst\nfcitx5\npicom" # REMOVED sxhkd to avoid danger
     echo -e "$menu" | rofi -dmenu -p "Manage services"
 }
 
