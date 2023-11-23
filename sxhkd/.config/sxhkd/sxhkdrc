@@ -1,7 +1,17 @@
 
 # set volume
-XF86Audio{Raise,Lower}Volume
-    amixer -c 1 set Master {1%+,1%-}; pkill -RTMIN+2 dwmblocks
+# XF86Audio{Raise,Lower}Volume
+#     amixer -c 1 set Master {1%+,1%-}; pkill -RTMIN+2 dwmblocks
+#     # pactl set-sink-volume @DEFAULT_SINK@ {+,-}1%
+
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +1%
+
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -1%
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # restart sxhkd to reload config
 super + control + shift + Menu

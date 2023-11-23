@@ -1,6 +1,6 @@
 #!/bin/bash
 
-connected_displays=$(xrandr | grep " connected" | awk '{print $1}')
+connected_displays=$(xrandr | grep -w "connected" | awk '{print $1}')
 hdmi_display=""
 edp_display=""
 

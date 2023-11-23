@@ -8,6 +8,8 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 export SXHKD_SHELL=/usr/bin/bash
 
+xsetroot -cursor_name left_ptr
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
@@ -17,29 +19,34 @@ bspc config focused_border_color "#61afef"
 bspc config normal_border_color "#abb2bf"
 bspc config window_gap          8
 
-bspc config split_ratio          0.52
+bspc config split_ratio          0.5
 bspc config borderless_monocle   false
 bspc config gapless_monocle      false
 
-
+# RULES
+# workspace
 bspc rule -a firefox desktop='^2'
 bspc rule -a linuxqq desktop='^3'
 bspc rule -a QQ desktop='^3'
 bspc rule -a TelegramDesktop desktop='^3'
 bspc rule -a discord desktop='^3'
 bspc rule -a steam desktop='^9'
+
 bspc rule -a Screenkey manage=off
-# bspc rule -a vlc state=floating center=true
-# bspc rule -a mpv state=floating
+
+# state
 bspc rule -a feh state=floating center=true
 bspc rule -a imv state=floating center=true
 bspc rule -a SimpleScreenRecorder state=floating
 bspc rule -a guvcview state=floating rectangle=480x270+1440+810 sticky=on layer=above
 bspc rule -a Zathura state=tiled
+bspc rule -a "QQ:qq:图片查看器" state=floating
+# bspc rule -a vlc state=floating center=true
+# bspc rule -a mpv state=floating
 
 
 fcitx5 &
 dunst &
 
 bash $HOME/.config/polybar/launch.sh
-$HOME/script/autostart.sh
+bash $HOME/script/autostart.sh

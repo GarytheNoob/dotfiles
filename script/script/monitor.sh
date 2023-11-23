@@ -7,7 +7,7 @@ listMonitor(){
     # Get the connected Monitors and display a rofi menu for users to choose
     # Returning a single monitor name like "HDMI-0"
 
-    connectedMonitors="$(xrandr -q | grep " connected" | awk '{print $1}')"
+    connectedMonitors="$(xrandr -q | grep -w "connected" | awk '{print $1}')"
     echo -e "$connectedMonitors" | rofi -dmenu -p "Choose a monitor"
 }
 
@@ -66,4 +66,4 @@ monitorCmd(){
     esac
 }
 
-
+listMonitor
