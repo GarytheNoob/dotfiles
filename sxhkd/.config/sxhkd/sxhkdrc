@@ -19,7 +19,7 @@ super + control + shift + Menu
 
 # restart polybar
 super + control + shift + l
-    pkill -USR1 -x polybar && notify-send "Resuming polybar"  
+    killall polybar && bash $HOME/.config/polybar/launch.sh && notify-send "Resuming polybar"
 
 # screenshot
 super + a

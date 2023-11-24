@@ -5,6 +5,6 @@
 # ./script/dwm/serviceInit.sh
 # ./script/dwm/wallpaper.sh -r
 
-$HOME/script/xrandrInit.sh
+# $HOME/script/xrandrInit.sh
 $HOME/script/serviceInit.sh
 $HOME/script/wallpaper.sh -r

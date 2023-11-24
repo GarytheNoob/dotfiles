@@ -13,8 +13,8 @@ for display in $connected_displays; do
 done
 
 if [ -n "$hdmi_display" ] && [ -n "$edp_display" ]; then
-    xrandr --output "$edp_display" --off
     xrandr --output "$hdmi_display" --auto --mode 2560x1440 --rate 144
+    xrandr --output "$edp_display" --auto --left-of "$hdmi_display" --rotate right
 else
     xrandr --output eDP-1-2 --auto
 fi
