@@ -18,7 +18,11 @@ leaveDwm(){
 }
 
 initMenu(){
-    menu="Config services\nConfig Wi-Fi\nChange Wallpaper\nSet Monitor\nLeave dwm" 
+    if [ -n "$(pgrep dwm)" ]; then
+        menu="Config services\nConfig Wi-Fi\nChange Wallpaper\nSet Monitor\nLeave dwm" 
+    else
+        menu="Config services\nConfig Wi-Fi\nChange Wallpaper\nSet Monitor"
+    fi
     echo -e "$menu" | exec rofi -dmenu -p "Choose function"
 }
 

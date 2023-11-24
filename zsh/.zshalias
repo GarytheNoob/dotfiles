@@ -58,3 +58,5 @@ if [[ "$HOST" = "GaryArchPC" ]]; then
     alias pdfmerge=$HOME/.local/bin/pdfmerge
     alias zathuraconf=$HOME/go/bin/zathuraconf
 fi
+
+alias joshuto="EDITOR=nvim joshuto"
