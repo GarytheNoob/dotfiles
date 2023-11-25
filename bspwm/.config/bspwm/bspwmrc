@@ -16,22 +16,16 @@ $HOME/script/xrandrInit.sh
 
 ########################################
 
-connected_displays=$(xrandr | grep -w "connected" | awk '{print $1}')
-hdmi_display=""
-edp_display=""
+# connected_displays=$(xrandr | grep -w "connected" | awk '{print $1}')
+connected_displays=$(xrandr | awk '/ connected/ {print $1}')
 
-for display in $connected_displays; do
-    if xrandr --query | grep -w "$display" | grep -q "eDP"; then
-        edp_display="$display"
-    elif xrandr --query | grep -w "$display" | grep -q "HDMI"; then
-        hdmi_display="$display"
-    fi
-done
+hdmi_display=$(echo "$connected_displays" | grep "HDMI")
+edp_display=$(echo  "$connected_displays" | grep "eDP")
 
 if [ -n "$hdmi_display" ] && [ -n "$edp_display" ]; then
     bspc monitor "$hdmi_display" -d 1 2 3 4 5
     bspc monitor "$edp_display"  -d 6 7 8 9 10
-    bspc wm -O "$hdmi_display" "$edp_display"
+    bspc wm -O "$hdmi_display" "$edp_display"  # Reorder the monitors
 else
     bspc monitor "$edp_display" -d 1 2 3 4 5 6 7 8 9 10
 fi

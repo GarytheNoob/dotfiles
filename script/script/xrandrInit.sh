@@ -1,16 +1,10 @@
 #!/bin/bash
 
-connected_displays=$(xrandr | grep -w "connected" | awk '{print $1}')
-hdmi_display=""
-edp_display=""
+# connected_displays=$(xrandr | grep -w "connected" | awk '{print $1}')
+connected_displays=$(xrandr | awk '/ connected/ {print $1}')
 
-for display in $connected_displays; do
-    if xrandr --query | grep -w "$display" | grep -q "eDP"; then
-        edp_display="$display"
-    elif xrandr --query | grep -w "$display" | grep -q "HDMI"; then
-        hdmi_display="$display"
-    fi
-done
+hdmi_display=$(echo "$connected_displays" | grep "HDMI")
+edp_display=$(echo  "$connected_displays" | grep "eDP")
 
 if [ -n "$hdmi_display" ] && [ -n "$edp_display" ]; then
     xrandr --output "$hdmi_display" --auto --mode 2560x1440 --rate 144
