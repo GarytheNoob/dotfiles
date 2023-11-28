@@ -124,9 +124,7 @@ super + {j,k}
 
 # focus or send to the given desktop
 super + shift + {1-9,0}
-	bspc node -d '^{1-9,10}'
-    # TODO: move to and focus
-    # bspc desktop -f '^{1-9,10}'
+	bspc node -d '^{1-9,10}' --follow
 
 super + {1-9,0}
     bspc desktop -f '^{1-9,10}'
