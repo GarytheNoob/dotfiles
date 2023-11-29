@@ -8,6 +8,8 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 export SXHKD_SHELL=/usr/bin/bash
 
+xrdb -merge $HOME/.Xresources
+
 xsetroot -cursor_name left_ptr
 
 pgrep -x sxhkd > /dev/null || sxhkd &
