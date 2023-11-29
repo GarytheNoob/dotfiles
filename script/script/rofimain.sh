@@ -2,9 +2,9 @@
 
 confirmLeave(){
     if [ $(( $RANDOM % 2 )) == 1 ]; then
-        echo -e "NO\nYES" | exec rofi -dmenu -p "Are you sure? You are leaving dwm."
+        echo -e "NO\nYES" | rofi -dmenu -p "Are you sure? You are leaving dwm."
     else
-        echo -e "YES\nNO" | exec rofi -dmenu -p "Are you sure? You are leaving dwm."
+        echo -e "YES\nNO" | rofi -dmenu -p "Are you sure? You are leaving dwm."
     fi
 }
 
@@ -18,26 +18,25 @@ leaveDwm(){
 }
 
 initMenu(){
+    menu="Switch Services\nConfig Wi-Fi\nRandom Wallpaper\nSet Monitor"
     if [ -n "$(pgrep dwm)" ]; then
-        menu="Config services\nConfig Wi-Fi\nChange Wallpaper\nSet Monitor\nLeave dwm" 
-    else
-        menu="Config services\nConfig Wi-Fi\nChange Wallpaper\nSet Monitor"
+        menu="$menu\nLeave dwm"
     fi
-    echo -e "$menu" | exec rofi -dmenu -p "Choose function"
+    echo -e "$menu" | rofi -dmenu -p "Choose function"
 }
 
 # main
 
 choice="$(initMenu)"
 case "$choice" in
-    "Config services")
+    "Switch Services")
         bash $HOME/script/configservice.sh
         ;;
     "Config Wi-Fi")
         bash $HOME/script/rofi-wifi-menu.sh
         ;;
-    "Change Wallpaper")
-        bash $HOME/script/wallpaper.sh -r && notify-send "Wallpaper successfully changed."
+    "Random Wallpaper")
+        bash $HOME/script/wallpaper.sh -r && notify-send "Wallpaper changed successfully ."
         ;;
     "Leave dwm")
         leaveDwm
