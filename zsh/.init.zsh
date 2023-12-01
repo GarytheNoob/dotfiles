@@ -1,5 +1,5 @@
-# FILENAME: .zshrc
-# DESCRIPTION: zsh's config file
+# FILENAME: .init.zsh
+# DESCRIPTION: zsh runs this script at every start
 # ORIGIN: https://github.com/GarytheNoob/dotfiles
 #
 # This file is partly or fully edited by
@@ -15,35 +15,12 @@
 #                       ▀▀     
 # GitHub: https://github.com/GarytheNoob
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export termapp=$(basename $(ps -p $(ps -p $$ -o ppid=) o args= | awk '{print $1}'))
 
-ZSH_THEME=""
-ENABLE_CORRECTION="true"
-plugins=(
-    git
-    zsh-autosuggestions
-    fast-syntax-highlighting
-    zsh-autocomplete
-)
-source $ZSH/oh-my-zsh.sh
+echo -e "\n  \033[01;34mWelcome to $termapp, $USER! \033[0m\n"
 
-export http_proxy=http://127.0.0.1:7890
-export https_proxy=http://127.0.0.1:7890
+# change ls colors
+LS_COLORS=$LS_COLORS:'di=0;36:ow=1;4;36' ; export LS_COLORS
 
-
-
-# if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-#     exec startx
-# fi
-
-if [[ $TERM == "linux" ]]; then
-    export LANG=en_US.UTF-8
-fi
-
-
-source "$HOME/.alias.zsh"
-source "$HOME/.init.zsh"
-source "$HOME/.fzf.zsh"
-
-eval "$(starship init zsh)" # start starship
+# variable
+export EDITOR=nvim

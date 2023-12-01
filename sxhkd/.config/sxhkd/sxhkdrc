@@ -52,6 +52,11 @@ super + {_,+ control} + f
 super + q
     linuxqq
 
+
+# re-arrange monitor order
+super + control + shift + m
+    $HOME/script/monOrder.sh
+
 #
 # bspwm hotkeys
 #

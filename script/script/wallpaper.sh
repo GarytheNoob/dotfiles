@@ -17,7 +17,7 @@ refreshWallpaper(){
     echo "$selected" > $pathfile
 }
 
-setWallpaper(){
+setWallpaperFromFile(){
     # Read the path from the file and set wallpaper
     cat $pathfile | xargs feh --bg-fill
 }
@@ -27,4 +27,13 @@ if [ "$1" == "-r" ]; then
     refreshWallpaper
 fi
 
-setWallpaper
+case "$1" in
+    "-r")
+        refreshWallpaper
+        ;;
+    "-f")
+        feh --bg-fill $2
+        ;;
+esac
+
+setWallpaperFromFile

@@ -36,9 +36,11 @@ case "$choice" in
         bash $HOME/script/rofi-wifi-menu.sh
         ;;
     "Random Wallpaper")
-        bash $HOME/script/wallpaper.sh -r && notify-send "Wallpaper changed successfully ."
+        bash $HOME/script/wallpaper.sh -r && notify-send "Wallpaper changed successfully."
         ;;
     "Leave dwm")
         leaveDwm
         ;;
+    "Set Monitor")
+        bash $HOME/script/monitor.sh
 esac

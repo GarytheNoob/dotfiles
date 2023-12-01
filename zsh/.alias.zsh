@@ -1,4 +1,4 @@
-# FILENAME: .zshalias
+# FILENAME: .alias.zsh
 # DESCRIPTION: aliases for zsh
 # ORIGIN: https://github.com/GarytheNoob/dotfiles
 # 

@@ -1,6 +1,5 @@
-# FILENAME: .zshinit
-# DESCRIPTION: zsh runs this script at every start
-# ORIGIN: https://github.com/GarytheNoob/dotfiles
+# FILENAME: .fzf.zsh
+# DESCRIPTION: fzf config in zsh
 #
 # This file is partly or fully edited by
 #  ▄▄▄  ▄  ▄▄  ▄ ▄      ▄▄     
@@ -15,12 +14,7 @@
 #                       ▀▀     
 # GitHub: https://github.com/GarytheNoob
 
-export termapp=$(basename $(ps -p $(ps -p $$ -o ppid=) o args= | awk '{print $1}'))
+export FZF_DEFAULT_OPTS='--preview "[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500"'
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
-echo -e "\n  \033[01;34mWelcome to $termapp, $USER! \033[0m\n"
 
-# change ls colors
-LS_COLORS=$LS_COLORS:'di=0;36:ow=1;4;36' ; export LS_COLORS
-
-# variable
-export EDITOR=nvim

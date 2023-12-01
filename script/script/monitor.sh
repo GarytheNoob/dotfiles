@@ -8,7 +8,20 @@ listMonitor(){
     # Returning a single monitor name like "HDMI-0"
 
     connectedMonitors="$(xrandr -q | grep -w "connected" | awk '{print $1}')"
-    echo -e "$connectedMonitors" | rofi -dmenu -p "Choose a monitor"
+    options="Toggle All ON\nToggle All OFF\n$connectedMonitors"
+    choice=$(echo -e "$options" | rofi -dmenu -p "Choose a monitor action")
+
+    case "$choice" in
+        "Toggle All ON")
+            xrandr --output --auto
+            ;;
+        "Toggle All OFF")
+            xrandr --output --off
+            ;;
+        *)
+            monitorCmd "$choice"
+            ;;
+    esac
 }
 
 monitorSetRelative(){
@@ -36,32 +49,36 @@ monitorSetRelative(){
             xrandr --output $monitor --same-as $rel_mon
             ;;
     esac
-
 }
 
 monitorCmd(){
     # monitorCmd [MONITOR] [CMD]
 
     monitor=$1
-    cmd=$2
-    case "$cmd" in
-        "auto")
+    options="Toggle ON|Toggle OFF|Auto|Rotate Normal|Rotate Right|Rotate Left|Rotate Inverted"
+    choice=$(echo -e "$options" | rofi -dmenu -sep "|" -p "Choose an action for $monitor")
+
+    case "$choice" in
+        "Toggle ON")
             xrandr --output $monitor --auto
             ;;
-        "rotateNormal")
+        "Toggle OFF")
+            xrandr --output $monitor --off
+            ;;
+        "Auto")
+            xrandr --output $monitor --auto
+            ;;
+        "Rotate Normal")
             xrandr --output $monitor --rotate normal
             ;;
-        "rotateRight")
+        "Rotate Right")
             xrandr --output $monitor --rotate right
             ;;
-        "rotateLeft")
+        "Rotate Left")
             xrandr --output $monitor --rotate left
             ;;
-        "rotateInverted")
+        "Rotate Inverted")
             xrandr --output $monitor --rotate inverted
-            ;;
-        "off")
-            xrandr --output $monitor --off
             ;;
     esac
 }
