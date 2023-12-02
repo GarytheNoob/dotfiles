@@ -17,7 +17,10 @@
 
 export termapp=$(basename $(ps -p $(ps -p $$ -o ppid=) o args= | awk '{print $1}'))
 
-echo -e "\n  \033[01;34mWelcome to $termapp, $USER! \033[0m\n"
+if [[ "$termapp" != "tmux" ]]; then
+    echo -e "\n  \033[01;34mWelcome to $termapp, $USER! \033[0m\n"
+fi
+
 
 # change ls colors
 LS_COLORS=$LS_COLORS:'di=0;36:ow=1;4;36' ; export LS_COLORS
