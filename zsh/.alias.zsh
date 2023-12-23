@@ -33,7 +33,7 @@ alias sudo="sudo -E"
 alias mkdir="mkdir -p"
 
 ## shortcut
-alias c="clash &"
+# alias c="clash &"
 alias stx=startx
 alias p="paru"
 alias q=exit
