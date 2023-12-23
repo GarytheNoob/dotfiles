@@ -30,7 +30,7 @@ super + p
     $HOME/script/launcher.sh
 
 # launch powermenu
-Scroll_Lock
+super + control + shift + p
     $HOME/script/powermenu.sh
 
 # launch settings
@@ -73,13 +73,17 @@ super + shift + c
 super + shift + m
 	bspc desktop -l next
 
-# send the newest marked node to the newest preselected node
-# super + y
-# 	bspc node newest.marked.local -n newest.!automatic.local
-
-# swap the current node and the biggest window
+# swap the current node and the biggest window in current desktop
 super + shift + Return
-	bspc node -s biggest.window
+	bspc node -s biggest.local
+
+# rotate the current tree by 90
+super + shift + i
+    bspc node @parent -R 90
+
+# rotate the current tree by 90
+super + shift + o
+    bspc node @parent -R 270
 
 #
 # state/flags
