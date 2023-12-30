@@ -65,7 +65,6 @@ bspc rule -a "QQ:qq:图片查看器" state=floating
 # bspc rule -a vlc state=floating center=true
 # bspc rule -a mpv state=floating
 
-
 fcitx5 &
 dunst &
 
