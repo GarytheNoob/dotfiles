@@ -46,9 +46,6 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push &"
 
-## refresh
-alias rs="source /home/GarytheNoob/.zshrc"
-
 ## bat
 if command -v bat &> /dev/null; then
     alias cat=bat
