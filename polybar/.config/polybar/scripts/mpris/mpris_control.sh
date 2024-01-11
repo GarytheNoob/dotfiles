@@ -129,9 +129,9 @@ elif [ "$1" == "--select" ]; then
     show_menu_selector
 elif [ "$1" == "--title" ]; then
     if [ $PLAYER_STATUS -eq -1 ]; then
-        echo "PLAYER NOT FOUND"
+        echo "-"
     elif [ $PLAYER_STATUS -eq 0 ]; then
-        echo "NO MUSIC IS PLAYING"
+        echo "-"
     else
         get_title
     fi
