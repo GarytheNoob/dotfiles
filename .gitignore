@@ -1,2 +1,3 @@
 **/node_modules
 **/pnpm-lock.yaml
+polybar/.config/polybar/scripts/lyric/.lyric.json
