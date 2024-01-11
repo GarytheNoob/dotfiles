@@ -89,8 +89,8 @@ show_menu_selector() {
         t=$(get_icon $i)
         options="${options}${t} ${i}*"
     done
-    options="${options} Exit"
-    menu="$(rofi -sep "*" -dmenu -i -p "Choose Player" -location 0 -hide-scrollbar -line-padding 4 -padding 20 -kb-row-tab "" <<<${options})"
+    options="${options}󰗼 Exit"
+    menu="$(rofi -sep "*" -dmenu -i -p "Choose Player"  $options)" # BUG: cant show properly
     menu=${menu:2}
     if [ menu == "Exit" ]; then
         return
