@@ -56,4 +56,5 @@ if [[ "$HOST" = "GaryArchPC" ]]; then
     alias zathuraconf=$HOME/go/bin/zathuraconf
 fi
 
-# alias joshuto="EDITOR=nvim joshuto"
+alias jo=joshuto
+alias ra=joshuto
