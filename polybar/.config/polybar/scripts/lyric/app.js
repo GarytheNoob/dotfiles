@@ -71,7 +71,7 @@ function findLyrics(pos, lyrics) {
 
 (async () => {
   const { pos, lyrics } = await reqLyrics();
-  const lyricIdx = findLyrics(pos, lyrics);
+  const lyricIdx = findLyrics(pos+0.5, lyrics);
   let lyricl = lyrics[lyricIdx].text;
   if (!lyricl) lyricl = '...';
   console.log(lyricl);
