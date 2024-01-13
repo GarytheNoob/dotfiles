@@ -21,7 +21,7 @@ if [[ "$termapp" != "tmux" ]]; then
     echo -e "\n  \033[01;34mWelcome to $termapp, $USER! \033[0m\n"
     if [ -n "$(tmux list-sessions 2>/dev/null)" ]; then
         echo "Running tmux sessions:"
-        echo "   $(tmux ls)"
+        echo "$(tmux ls| awk '{print "    " $0}')"
         alias tmuxa='tmux attach-session -t'
         echo "Attach to sessions quickly with \033[04;33mtmuxa\033[0m."
     fi
