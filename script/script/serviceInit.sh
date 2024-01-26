@@ -2,8 +2,8 @@
 
 pgrep -x picom > /dev/null || picom --experimental-backends &
 
-if [ -z "$(pgrep -x qv2ray)" ]; then
-    qv2ray &
-fi
+# if [ -z "$(pgrep -x qv2ray)" ]; then
+#     qv2ray &
+# fi
 pgrep -x blueberry-tray >> /dev/null || blueberry-tray 
 # clash &
