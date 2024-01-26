@@ -28,6 +28,6 @@ if [[ "$termapp" != "tmux" ]]; then
     # change ls colors
 fi
 
-
+export EDITOR=vi
 LS_COLORS=$LS_COLORS:'di=0;36:ow=1;4;36' ; export LS_COLORS
 
