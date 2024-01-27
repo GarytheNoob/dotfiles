@@ -14,10 +14,12 @@ hdmi_display=$(echo "$connected_displays" | grep "HDMI")
 edp_display=$(echo  "$connected_displays" | grep "eDP")
 
 if [ -n "$hdmi_display" ] && [ -n "$edp_display" ]; then
-    MONITOR="$hdmi_display" polybar mainbar  2>&1 | tee -a /tmp/polybar.log & disown
-    MONITOR="$edp_display"  polybar minorbar 2>&1 | tee -a /tmp/polybar.log & disown
-
+    if [[ "$#" -gt 0 && "$1" == "--sing" ]]; then
+        MONITOR="$hdmi_display" polybar mainbar 2>&1 | tee -a /tmp/polybar/mainbar.log & disown
+    else
+        MONITOR="$hdmi_display" polybar mainbar  2>&1 | tee -a /tmp/polybar/mainbar.log & disown
+        MONITOR="$edp_display"  polybar minorbar 2>&1 | tee -a /tmp/polybar/minorbar.log & disown
+    fi
 else
-    MONITOR="$edp_display"  polybar mainbar  2>&1 | tee -a /tmp/polybar.log & disown
+    MONITOR="$edp_display"  polybar mainbar  2>&1 | tee -a /tmp/polybar/mainbar.log & disown
 fi
-echo "Polybar launched..."
