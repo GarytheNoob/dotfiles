@@ -1,0 +1,25 @@
+import:
+ - ~/.config/alacritty/alacritty.yml
+
+colors:
+  primary:
+    background: '#252525'
+    foreground: '#d6d6d6'
+
+  normal:
+    red:      '#ff6239'
+    green:    '#44cd71'
+    yellow:   '#fee155'
+    blue:     '#6d56ff'
+    magenta:  '#ff62dd'
+    cyan:     '#00bbff'
+    white:    '#a8a8a8'
+
+  bright:
+    red:      '#f43232'
+    green:    '#00d29e'
+    yellow:   '#ff791b'
+    blue:     '#2aa4db'
+    magenta:  '#ee55b7'
+    cyan:     '#a530e0'
+    white:    '#aeaeae'

@@ -9,7 +9,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 # import:
- # - 
+#  - ~/workspace/alacritty_custom/lovelive.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -50,33 +50,33 @@ font:
    y: 0
 
 # Colors (One Dark)
-colors:
-  # Default colors
-  primary:
-    background: '#282c34'
-    foreground: '#abb2bf'
-
-  # Normal colors
-  normal:
-    black:   '#131613'
-    red:     '#e06c75'
-    green:   '#98c379'
-    yellow:  '#d19a66'
-    blue:    '#61afef'
-    magenta: '#c678dd'
-    cyan:    '#56b6c2'
-    white:   '#abb2bf'
-
-  # Bright colors
-  bright:
-    black:   '#5c6370'
-    red:     '#e06c75'
-    green:   '#98c379'
-    yellow:  '#d19a66'
-    blue:    '#61afef'
-    magenta: '#c678dd'
-    cyan:    '#56b6c2'
-    white:   '#ffffff'
+# colors:
+#   # Default colors
+#   primary:
+#     background: '#282c34'
+#     foreground: '#abb2bf'
+#
+#   # Normal colors
+#   normal:
+#     black:   '#131613'
+#     red:     '#e06c75'
+#     green:   '#98c379'
+#     yellow:  '#d19a66'
+#     blue:    '#61afef'
+#     magenta: '#c678dd'
+#     cyan:    '#56b6c2'
+#     white:   '#abb2bf'
+#
+#   # Bright colors
+#   bright:
+#     black:   '#5c6370'
+#     red:     '#e06c75'
+#     green:   '#98c379'
+#     yellow:  '#d19a66'
+#     blue:    '#61afef'
+#     magenta: '#c678dd'
+#     cyan:    '#56b6c2'
+#     white:   '#ffffff'
 
 cursor:
   # Cursor style

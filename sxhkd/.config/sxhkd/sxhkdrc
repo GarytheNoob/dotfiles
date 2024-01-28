@@ -39,7 +39,7 @@ super + control + p
 
 # open terminal
 super + Return
-    alacritty
+    $HOME/script/runterminal/alacritty.sh
 
 super + control + Return
     kitty
