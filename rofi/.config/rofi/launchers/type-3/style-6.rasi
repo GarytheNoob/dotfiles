@@ -11,6 +11,7 @@
 configuration {
 	modi:                       "drun,run,filebrowser,window";
     show-icons:                 true;
+    icon-theme:                 "breeze-dark";
     display-drun:               " Apps";
     display-run:                " Run";
     display-filebrowser:        " Files";
