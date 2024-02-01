@@ -38,7 +38,9 @@ alias stx=startx
 alias p="paru"
 alias q=exit
 alias cls=clear
+
 # alias vim="nvim"
+alias vi="nvim"
 
 ## git
 ## NOTE: Some git aliases are provided by the git plugin of zsh
