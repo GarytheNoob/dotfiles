@@ -7,6 +7,7 @@ local get_theme = function ()
             return 'OneDark (base16)'
         end
     end
+    return 'Default Dark (base16)'
 end
 
 local config = {
