@@ -29,9 +29,9 @@ hdmi_display=$(echo "$connected_displays" | grep "HDMI")
 edp_display=$(echo  "$connected_displays" | grep "eDP")
 
 if [ -n "$hdmi_display" ] && [ -n "$edp_display" ]; then
-    bspc monitor "$hdmi_display" -d 1 2 3 4 5 6 7 8 9 10
+    bspc monitor "$hdmi_display" -d 1 2 3 4 5
 else
-    bspc monitor "$edp_display" -d 1 2 3 4 5 6 7 8 9 10
+    bspc monitor "$edp_display" -d 1 2 3 4 5
 fi
 
 ########################################
