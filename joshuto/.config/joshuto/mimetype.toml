@@ -124,6 +124,7 @@ scss.inherit = "text_default"
 sh.inherit = "text_default"
 srt.inherit = "text_default"
 svelte.inherit = "text_default"
+tex.inherit = "text_default"
 toml.inherit = "text_default"
 tsx.inherit = "text_default"
 txt.inherit = "text_default"
@@ -207,12 +208,6 @@ pdf.inherit = "reader_default"
 kra.app_list = [{ command = "krita", fork = true, silent = true }]
 kdenlive.app_list = [{ command = "kdenlive", fork = true, silent = true }]
 
-tex.app_list = [
-{ command = "micro" },
-{ command = "gedit", fork = true, silent = true },
-{ command = "bat", confirm_exit = true },
-{ command = "pdflatex" },
-]
 
 torrent.app_list = [{ command = "transmission-gtk" }]
 
