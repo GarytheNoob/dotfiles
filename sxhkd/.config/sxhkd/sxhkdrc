@@ -44,6 +44,11 @@ super + Return
 super + control + Return
     kitty
 
+# open floating qalc window
+super + d
+    $HOME/script/runterminal/alacritty.sh --qalc
+
+
 # open firefox
 super + {_,+ control} + f
     firefox {_, -private}
