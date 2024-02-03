@@ -3,11 +3,11 @@
 # TODO: Switch
 
 if [[ "$THEME" == "onedark" ]]; then
-    config_path="~/.config/alacritty/onedark.yml"
+    config_path=~/.config/alacritty/onedark.yml
 elif [[ "$THEME" == "lovelive" ]]; then
-    config_path="~/.config/alacritty/lovelive.yml"
+    config_path=~/.config/alacritty/lovelive.yml
 else
-    config_path="~/.config/alacritty/alacritty.yml"
+    config_path=~/.config/alacritty/alacritty.yml
 fi
 
 if [[ "$#" -gt 0 ]]; then
