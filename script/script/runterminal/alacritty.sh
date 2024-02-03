@@ -16,11 +16,5 @@ if [[ "$#" -gt 0 ]]; then
         exec alacritty --config-file $config_path --class floating --command qalc
     fi
 else
-    if [[ "$THEME" == "onedark" ]]; then
-        exec alacritty --config-file $config_path
-    elif [[ "$THEME" == "lovelive" ]]; then
-        exec alacritty --config-file $config_path
-    else
-        exec alacritty
-    fi
+    exec alacritty --config-file $config_path
 fi
