@@ -45,3 +45,4 @@ source "$HOME/.init.zsh"
 source "$HOME/.fzf.zsh"
 
 eval "$(starship init zsh)" # start starship
+eval "$(zoxide init zsh)"   # start zoxide
