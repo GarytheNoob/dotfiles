@@ -38,6 +38,7 @@ bspc rule -a linuxqq desktop='^3'
 bspc rule -a QQ desktop='^3'
 bspc rule -a TelegramDesktop desktop='^3'
 bspc rule -a discord desktop='^3'
+bspc rule -a steam desktop='^5'
 
 bspc rule -a Screenkey manage=off
 
