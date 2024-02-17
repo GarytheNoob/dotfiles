@@ -409,9 +409,9 @@
 #    msg_urgency = critical
 #    fullscreen = show
 
-#[espeak]
-#    summary = "*"
-#    script = dunst_espeak.sh
+[espeak]
+   summary = "*"
+   script = /home/GarytheNoob/script/alert/notify.sh
 
 #[script-test]
 #    summary = "*script*"
