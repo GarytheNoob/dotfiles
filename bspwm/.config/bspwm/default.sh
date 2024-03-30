@@ -36,6 +36,8 @@ bspc config gapless_monocle      false
 bspc rule -a firefox desktop='^2'
 bspc rule -a linuxqq desktop='^3'
 bspc rule -a QQ desktop='^3'
+bspc rule -a wechat desktop='^3'
+bspc rule -a element desktop='^3'
 bspc rule -a TelegramDesktop desktop='^3'
 bspc rule -a discord desktop='^3'
 bspc rule -a steam desktop='^5'
