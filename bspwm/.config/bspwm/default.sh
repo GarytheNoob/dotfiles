@@ -14,7 +14,6 @@ export THEME=onedark
 fcitx5 &
 dunst &
 
-$HOME/script/autostart.sh
 
 
 xrdb -merge $HOME/.Xresources

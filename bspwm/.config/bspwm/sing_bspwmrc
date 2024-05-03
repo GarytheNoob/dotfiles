@@ -23,3 +23,5 @@ fi
 ########################################
 
 $HOME/.config/polybar/launch.sh --sing
+
+$HOME/script/autostart.sh
