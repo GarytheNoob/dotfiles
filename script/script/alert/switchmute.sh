@@ -8,21 +8,13 @@ fi
 
 status=$(/bin/cat $cache_path)
 
-case "$status" in
-    "muted")
-        ;;
-    "unmuted")
-        echo 
-        ;;
-esac
-
 if [[ $# -gt 0 && $1 == "-q" ]]; then
     case "$status" in
         "muted")
-            echo " "
+            echo "󰂛"
             ;;
         "unmuted")
-            echo " "
+            echo "󰂚"
             ;;
     esac
 else
