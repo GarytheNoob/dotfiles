@@ -45,7 +45,7 @@ super + control + Return
     kitty
 
 # open floating qalc window
-super + d
+super + shift + d
     $HOME/script/runterminal/alacritty.sh --qalc
 
 
