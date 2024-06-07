@@ -17,7 +17,7 @@
 
 export termapp=$(basename $(ps -p $(ps -p $$ -o ppid=) o args= | awk '{print $1}'))
 
-if [[ "$termapp" != "tmux" ]]; then
+if [[ "$termapp" != "tmux" && "$termapp" != "nvim" ]]; then
     echo -e "\n  \033[01;34mWelcome to $termapp, $USER! \033[0m\n"
     if [ -n "$(tmux list-sessions 2>/dev/null)" ]; then
         echo "Running tmux sessions:"
