@@ -7,3 +7,4 @@ pgrep -x picom > /dev/null || picom --experimental-backends -b
 # fi
 pgrep -x blueberry-tray >> /dev/null || blueberry-tray 
 # clash &
+# mihomo &
