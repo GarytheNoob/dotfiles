@@ -33,6 +33,7 @@ bspc config gapless_monocle      false
 # RULES
 # workspace
 bspc rule -a firefox desktop='^2'
+bspc rule -a zen-alpha desktop='^2'
 bspc rule -a linuxqq desktop='^3'
 bspc rule -a QQ desktop='^3'
 bspc rule -a wechat desktop='^3'
