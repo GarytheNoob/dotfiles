@@ -49,6 +49,7 @@ bspc rule -a feh state=floating center=true
 bspc rule -a blueberry.py state=floating center=true
 bspc rule -a imv state=floating center=true
 bspc rule -a SimpleScreenRecorder state=floating
+bspc rule -a mixtex.exe state=floating
 bspc rule -a guvcview state=floating rectangle=480x270+1440+810 sticky=on layer=above
 bspc rule -a Zathura state=tiled
 bspc rule -a "QQ:qq:图片查看器" state=floating
