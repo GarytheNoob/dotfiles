@@ -27,8 +27,10 @@ plugins=(
     zsh-autocomplete
 )
 source $ZSH/oh-my-zsh.sh
-
-
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# Only changing the escape key to `jk` in insert mode, we still
+# keep using the default keybindings `^[` in other modes
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 
 # if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
