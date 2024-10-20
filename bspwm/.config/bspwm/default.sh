@@ -22,7 +22,7 @@ xsetroot -cursor_name left_ptr
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc config window_gap          8
+bspc config window_gap          10
 bspc config border_width         2
 bspc config focused_border_color "#61afef"
 bspc config normal_border_color "#abb2bf"
