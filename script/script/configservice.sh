@@ -10,7 +10,7 @@ switchProgram(){ # switchProgram [PROGRAM_NAME]
         if [ -n "$(pgrep -x picom)" ]; then
             killall picom && notify-send "Killed picom"
         else
-            notify-send "Started picom" && exec picom --experimental-backends -b
+            notify-send "Started picom" && exec picom #--experimental-backends -b
         fi
     elif [ -n "$(pgrep -x $1)" ]; then
         killall $1 && notify-send "Killed $1"
