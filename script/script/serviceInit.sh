@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pgrep -x picom > /dev/null || picom
+pgrep -x picom > /dev/null || picom -b
 
 # if [ -z "$(pgrep -x qv2ray)" ]; then
 #     qv2ray &
