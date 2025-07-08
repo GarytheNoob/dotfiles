@@ -51,7 +51,7 @@ super + shift + d
 
 # open firefox
 super + {_,+ control} + f
-    zen-browser-optimized {_, --private-window}
+    zen {_, --private-window}
 
 # open qq
 super + q

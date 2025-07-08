@@ -14,26 +14,25 @@ export THEME=onedark
 fcitx5 &
 dunst &
 
-
-
 xrdb -merge $HOME/.Xresources
 
 xsetroot -cursor_name left_ptr
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x sxhkd >/dev/null || sxhkd &
 
-bspc config window_gap          10
-bspc config border_width         2
+bspc config window_gap 10
+bspc config border_width 2
 bspc config focused_border_color "#61afef"
 bspc config normal_border_color "#abb2bf"
-bspc config split_ratio          0.5
-bspc config borderless_monocle   false
-bspc config gapless_monocle      false
+bspc config split_ratio 0.5
+bspc config borderless_monocle false
+bspc config gapless_monocle false
 
 # RULES
 # workspace
 bspc rule -a firefox desktop='^2'
 bspc rule -a zen-alpha desktop='^2'
+bspc rule -a zen-browser desktop='^2'
 bspc rule -a linuxqq desktop='^3'
 bspc rule -a QQ desktop='^3'
 bspc rule -a wechat desktop='^3'
@@ -56,4 +55,3 @@ bspc rule -a "QQ:qq:图片查看器" state=floating
 # bspc rule -a vlc state=floating center=true
 # bspc rule -a mpv state=floating
 bspc rule -a "*:floating:*" state=floating center=true
-
