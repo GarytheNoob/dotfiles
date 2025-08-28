@@ -26,10 +26,10 @@ if command -v lsd &> /dev/null; then
 fi
 
 ## fetch
-alias f=neofetch
+alias f=fastfetch
 
 ## cmd prefix/flags
-alias sudo="sudo -E"
+alias sudo="sudo"
 alias mkdir="mkdir -p"
 
 ## shortcut
