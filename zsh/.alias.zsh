@@ -22,7 +22,7 @@ if command -v lsd &> /dev/null; then
     alias la="lsd -A"
     alias lla="lsd -lA"
     alias l="lsd -lA"
-    alias tree="lsd -a --tree --icon never"
+    alias tree="lsd --tree --icon never"
 fi
 
 ## fetch
@@ -60,3 +60,5 @@ fi
 
 alias jo=joshuto
 alias ra=joshuto
+
+alias py=ptpython
