@@ -50,4 +50,4 @@ source "$HOME/.fzf.zsh"
 eval "$(starship init zsh)" # start starship
 eval "$(zoxide init --cmd cd zsh)"   # start zoxide
 
-export PATH=$PATH:/home/GarytheNoob/.spicetify
+export PATH=:/opt/homebrew/bin:$PATH:/home/GarytheNoob/.spicetify
