@@ -4,16 +4,16 @@ local config = {
     font_size = 18,
     font = wezterm.font_with_fallback({
         { family = 'JetBrainsMono Nerd Font', weight = 'Regular' },
-        { family = 'Noto Sans CJK SC',        weight = 'Bold'    },
+        { family = 'Noto Sans CJK SC',        weight = 'Regular' },
         'Noto Color Emoji',
     }),
     color_scheme = 'OneDark (base16)',
 
     window_padding = {
-        left = 0,
-        right = 0,
-        top = 0,
-        bottom = 0,
+        left = 10,
+        right = 10,
+        top = 10,
+        bottom = 10,
     },
 
     enable_tab_bar = false,
