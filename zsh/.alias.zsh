@@ -49,9 +49,9 @@ alias gc="git commit -m"
 alias gp="git push &"
 
 ## bat
-if command -v bat &> /dev/null; then
-    alias cat=bat
-fi
+# if command -v bat &> /dev/null; then
+#     alias cat=bat
+# fi
 
 if [[ "$HOST" = "GaryArchPC" ]]; then
     alias pdfmerge=$HOME/.local/bin/pdfmerge
