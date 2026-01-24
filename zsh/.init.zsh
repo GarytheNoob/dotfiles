@@ -28,6 +28,14 @@ if [[ "$termapp" != "tmux" && "$termapp" != "nvim" ]]; then
     # change ls colors
 fi
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 export EDITOR=nvim
 LS_COLORS=$LS_COLORS:'di=0;36:ow=1;4;36' ; export LS_COLORS
 
