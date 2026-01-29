@@ -1,5 +1,4 @@
 local wezterm = require("wezterm")
-
 local config = {
     font_size = 18,
     font = wezterm.font_with_fallback({
@@ -20,6 +19,34 @@ local config = {
     hide_tab_bar_if_only_one_tab = true,
     window_decorations = "RESIZE",
     window_close_confirmation = 'NeverPrompt',
+    disable_default_key_bindings = true,
+    keys = {
+        {
+            key = 'c',
+            mods = 'CMD',
+            action = wezterm.action.CopyTo('Clipboard'),
+        },
+        {
+            key = 'v',
+            mods = 'CMD',
+            action = wezterm.action.PasteFrom('Clipboard'),
+        },
+        {
+            key = 'L',
+            mods = 'CMD|SHIFT',
+            action = wezterm.action.ShowDebugOverlay,
+        },
+        {
+            key = '=',
+            mods = 'CMD',
+            action = wezterm.action.IncreaseFontSize,
+        },
+        {
+            key = '-',
+            mods = 'CMD',
+            action = wezterm.action.DecreaseFontSize,
+        },
+    }
 }
 
 return config
