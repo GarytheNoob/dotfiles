@@ -37,7 +37,6 @@ alias mkdir="mkdir -p"
 alias stx=startx
 alias p="paru"
 alias q=exit
-alias cls=clear
 
 # alias vim="nvim"
 alias vi="nvim"
