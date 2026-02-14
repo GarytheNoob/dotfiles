@@ -51,3 +51,6 @@ eval "$(starship init zsh)" # start starship
 eval "$(zoxide init --cmd cd zsh)"   # start zoxide
 
 export PATH=:/opt/homebrew/bin:$PATH:/home/GarytheNoob/.spicetify
+
+# Created by `pipx` on 2026-02-13 08:42:12
+export PATH="$PATH:/Users/garythenoob/.local/bin"
