@@ -1,0 +1,9 @@
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 16
+
+window-decoration = false
+
+theme = Atom One Dark
+
+quit-after-last-window-closed = true
+confirm-close-surface = false
