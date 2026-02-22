@@ -92,7 +92,7 @@ automatically-unhide-macos-hidden-apps = false
     # '''
 
     # Start App
-    alt-enter = 'exec-and-forget open -n -a wezterm'
+    alt-enter = 'exec-and-forget open -n -a ghostty'
     alt-f = 'exec-and-forget open -n -a zen'
 
     # Close App
