@@ -29,13 +29,9 @@ fi
 alias f=fastfetch
 
 ## cmd prefix/flags
-alias sudo="sudo"
 alias mkdir="mkdir -p"
 
 ## shortcut
-# alias c="clash &"
-alias stx=startx
-alias p="paru"
 alias q=exit
 
 # alias vim="nvim"
