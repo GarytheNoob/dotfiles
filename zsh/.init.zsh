@@ -39,4 +39,4 @@ function y() {
 unsetopt autocd
 export EDITOR=nvim
 LS_COLORS=$LS_COLORS:'di=0;36:ow=1;4;36' ; export LS_COLORS
-
+# export DYLD_LIBRARY_PATH="/opt/homebrew/opt/expat/lib"
