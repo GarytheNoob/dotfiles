@@ -8,16 +8,15 @@ $HOME/.config/bspwm/default.sh
 
 $HOME/script/sing_xrandrInit.sh
 
-
 connected_displays=$(xrandr | awk '/ connected/ {print $1}')
 
 hdmi_display=$(echo "$connected_displays" | grep "HDMI")
-edp_display=$(echo  "$connected_displays" | grep "eDP")
+edp_display=$(echo "$connected_displays" | grep "eDP")
 
 if [ -n "$hdmi_display" ] && [ -n "$edp_display" ]; then
-    bspc monitor "$hdmi_display" -d 1 2 3 4 5
+  bspc monitor "$hdmi_display" -d 1 2 3 4 5
 else
-    bspc monitor "$edp_display" -d 1 2 3 4 5
+  bspc monitor "$edp_display" -d 1 2 3 4 5
 fi
 
 ########################################
@@ -25,3 +24,5 @@ fi
 $HOME/.config/polybar/launch.sh --sing &
 
 $HOME/script/autostart.sh &
+
+# alacritty
