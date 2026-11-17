@@ -155,6 +155,10 @@ keymap = [
 	# Help
 	{ on = "~",    run = "help", desc = "Open help" },
 	{ on = "<F1>", run = "help", desc = "Open help" },
+
+    # Sort file to Course Folder
+    { on = ["C", "s"], run = "shell \"stcf  %s\" --cursor=5 --interactive ",
+        desc = "Sort the file under cursor to the corresponding course folder" },
 ]
 
 [tasks]
